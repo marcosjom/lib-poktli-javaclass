@@ -1,61 +1,53 @@
-==========================
-poktli
-==========================
 
-Poktli ("aroma" en Nahuatl) es una librería para la carga y guardado de archivos compilados de JAVA (.class). Puede ser utilizada como base para el desarrollo de decompiladores, (des)ofuscadores, inyectores de código y otras herramientas para proyectos JAVA.
+#poktli
 
-==========================
-Licencia
-==========================
-GPLv2, ver archivo LICENSE
+Poktli ("aroma" in Nahuatl) is a library for parsing, loading and saving compiled JAVA files (.class). It can be used as a basis for the development of decompilers, (de)obfuscators, code injectors and other tools for JAVA projects.
 
-==========================
-Origen
-==========================
-Publicada el 09/feb/2013.
+#Licence
 
-Esta librería fue inicialmente desarrollada por Marcos Ortega a partir del documento de especificaciones de archivos CLASS publicado por Oracle:  http://docs.oracle.com/javase/specs/jvms/se5.0/html/ClassFile.doc.html
+GPLv2, see LICENSE file
 
-==========================
-Utilidad
-==========================
-Esta implementación intenta ser una alternativa a "javap", apuntando a tener disponibles versiones en C, Java y otros lenguajes de interés. De tal forma que los desarrolladores podamos crear software con la funcionalidad de cargar, manipular y guardar archivos ".class".
+#Origin
 
-Posibles implementaciones prácticas de esta librería incluyen el desarrollo del siguiente tipo de software:
+Published on 09/Feb/2013.
 
-a) para compilación de código (producir class)
+This library was initially developed by Marcos Ortega from the CLASS file specifications document published by Oracle: http://docs.oracle.com/javase/specs/jvms/se5.0/html/ClassFile.doc.html
 
-b) para decompilación de binarios (interpretar class)
+#Utility
 
-c) para ofuscación en binarios (manipular class)
+This implementation is intended to be an alternative to "javap", aiming to have versions in C, Java and other languages of interest available. In such a way that developers can create software with the functionality of loading, manipulating and saving ".class" files.
 
-d) desofuscación de binarios (interpretar class y opcodes)
+Possible practical implementations of this library include the development of the following type of software:
 
-e) inyección o extracción de opcodes, miembros, métodos o invocaciones a métodos (manipular class)
+a) for code compilation (produce class)
 
-f) plugins, builders o asistentes que faciliten el proceso de integrar librerías de terceros a un proyecto Java.
+b) for decompilation of binaries (interpret class)
 
-g) otros...
+c) for obfuscation in binaries (manipulate class)
 
-Esperamos algún día las especificaciones de los binarios DEX (Android Dalvik) y Blackberry Micro sean publicados oficialmente y puedan ser integrados a esta librería.
+d) deobfuscation of binaries (interpret class and opcodes)
 
-==========================
-Binarios de prueba
-==========================
+e) injection or extraction of opcodes, members, methods or method invocations (manipulate class)
 
-ClassSnifSnif.jar es una binario que permite probar la carga y guardado de archivos class. Los siguientes son ejemplos de uso desde consola:
+f) plugins, builders or wizards that facilitate the process of integrating third-party libraries into a Java project.
 
-Prueba simple y silenciosa:
+Others...
 
-$ java -jar ClassSnifSnif.jar -class ./miArchivoCompilado.class 
+#Test binaries
 
-Prueba describiendo el contenido del archivo:
+ClassSnifSnif.jar is a binary that allows you to test the loading and saving of class files. The following are examples of console usage:
 
-$ java -jar ClassSnifSnif.jar -v -class ./miArchivoCompilado.class 
+Simple and silent test:
 
-Prueba de carga y guardado de archivo:
+$ java -jar ClassSnifSnif.jar -class ./myFile.class 
 
-$ java -jar ClassSnifSnif.jar -test -class ./miArchivoCompilado.class 
+Test describing the contents of the file:
+
+$ java -jar ClassSnifSnif.jar -v -class ./myFile.class 
+
+Load and file save test:
+
+$ java -jar ClassSnifSnif.jar -test -class ./myFile.class 
 
 
 
